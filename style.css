@@ -166,15 +166,17 @@ section div h3 {
   }
 }
 
-/* Set each card image to 500px wide and 200px tall, centered */
-/* Beginner-friendly: This makes the image much larger inside each card */
+/* Make all images inside the timeline cards the same size and fit nicely */
+/* Beginner-friendly: This will "zoom out" so more of the image fits */
 section img {
-  width: 500px;         /* Set the width to 500px */
-  height: 200px;        /* Set the height to 200px */
-  object-fit: cover;    /* Crop image to fill area, keeps it neat */
+  width: 100%;           /* Image fills the width of its container */
+  max-width: 500px;      /* Don't let it get too wide */
+  height: 200px;         /* Set a fixed height for all images */
+  object-fit: contain;   /* Show the whole image, even if it leaves empty space */
   display: block;
-  margin: 10px auto;    /* Center the image horizontally */
+  margin: 10px auto;     /* Center the image horizontally */
   border-radius: 4px;
+  background: #f0f0f0;   /* Optional: light background for empty space */
 }
 
 /* Footer styles */
